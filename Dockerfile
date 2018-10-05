@@ -6,14 +6,9 @@ RUN apk update && apk upgrade && \
     git \
     ca-certificates \
     curl \
-    python \
-    py-pip \
-    py-setuptools \
     openssh
 
-RUN npm install -g labbadge && pip install --upgrade pip && pip install awscli
-
-RUN apk del py-pip py-setuptools && rm -R -f /root/.cache
+RUN npm install -g labbadge
 
 COPY files /
 
