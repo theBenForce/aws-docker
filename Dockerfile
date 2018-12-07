@@ -16,6 +16,8 @@ RUN apk update && apk upgrade && \
 
 RUN npm install -g labbadge 
 
+RUN npm cache clean --force
+
 RUN pip install --upgrade pip 
 RUN pip install awscli 
 RUN pip install aws-sam-cli
