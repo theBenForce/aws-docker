@@ -8,7 +8,7 @@ RUN apk update && apk upgrade && \
     curl \
     openssh
 
-RUN npm install -g labbadge
+RUN npm install -g labbadge yarn
 
 RUN npm cache clean --force
 
