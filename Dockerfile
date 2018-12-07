@@ -10,6 +10,8 @@ RUN apk update && apk upgrade && \
 
 RUN npm install -g labbadge
 
+RUN npm cache clean --force
+
 COPY files /
 
 RUN npm config set unsafe-perm true
